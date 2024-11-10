@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Series</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class = "col">
+                <h1 style="background-color: #1E90FF;">
+                    TV Series
+                </h1>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col">
+                
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Channel</th>
+                        <th scope="col">Seasons</th>
+                      </tr>
+                    </thead>
+                    <tbody id="series">
+                      <tr *ngFor="let serie of series">
+                        <td style = "font-weight:bold;">
+                          {{serie.id}}
+                        </td>
+                        <td style = "color:#1E90FF">
+                          {{serie.name}}
+                        </td>
+                        <td>
+                          {{serie.channel}}
+                        </td>
+                        <td>
+                          {{serie.seasons}}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class = "row">
+            <div class="col">
+                <h3 style = "font-weight: normal;" id="promedio">
+                  Seasons average: {{averageSeasons}}
+                </h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
